@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Akalu Abraham</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .about-section {
+      padding: 3rem 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .about-text p {
+      margin-bottom: 1.2rem;
+      color: #334155;
+      font-size: 1.05rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .skill-tag {
+      background: #e2e8f0;
+      padding: 0.4rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #0f172a;
+    }
+
+    .timeline {
+      margin-top: 2rem;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      border-left: 3px solid #3b82f6;
+    }
+
+    .timeline-year {
+      font-weight: 700;
+      color: #2563eb;
+      min-width: 70px;
+    }
+
+    .timeline-content h4 {
+      font-size: 1.05rem;
+    }
+
+    .timeline-content p {
+      color: #475569;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .profile-image {
+      background: #f1f5f9;
+      border-radius: 1rem;
+      padding: 2rem;
+      text-align: center;
+      border: 2px dashed #cbd5e1;
+    }
+
+    .profile-image .avatar {
+      font-size: 8rem;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Portfolio</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about-section">
+    <div class="container">
+      <h1 class="section-title">About Me</h1>
+      
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a passionate AI Engineer and Data Scientist with expertise in machine learning, natural language processing, and building intelligent applications. I specialize in developing LLM-powered solutions, creating robust ML models, and crafting data-driven web applications.
+          </p>
+          <p>
+            With a strong foundation in computer science and a deep interest in artificial intelligence, I enjoy tackling complex problems and turning data into actionable insights. My work spans across the entire AI development lifecycle, from research and prototyping to deployment and scaling.
+          </p>
+          <p>
+            I believe in the power of technology to transform industries and improve lives. Whether it's building a chatbot that understands context or creating a predictive model that drives business decisions, I'm committed to delivering high-quality, impactful solutions.
+          </p>
+          
+          <h3 style="margin-top: 2rem; margin-bottom: 0.8rem;">Skills &amp; Technologies</h3>
+          <div class="skills-list">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">LLMs</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="profile-image">
+            <span class="avatar">👨‍💻</span>
+            <h3 style="margin-top: 0.5rem;">Akalu Abraham</h3>
+            <p style="color: #475569;">AI Engineer &amp; Data Scientist</p>
+          </div>
+
+          <div class="timeline">
+            <h3 style="margin-bottom: 1rem;">Experience</h3>
+            <div class="timeline-item">
+              <span class="timeline-year">2023 - Present</span>
+              <div class="timeline-content">
+                <h4>Senior AI Engineer</h4>
+                <p>Building LLM-powered solutions and leading ML initiatives.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2021 - 2023</span>
+              <div class="timeline-content">
+                <h4>Data Scientist</h4>
+                <p>Developed predictive models and data pipelines for enterprise clients.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <span class="timeline-year">2019 - 2021</span>
+              <div class="timeline-content">
+                <h4>Full Stack Developer</h4>
+                <p>Built web applications with Python and React.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <h4>About This Site</h4>
+        <p style="color: #94a3b8; font-size: 0.95rem;">
+          Personal portfolio showcasing my work in AI, Machine Learning, and Web Development.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Akalu Abraham. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .services-page {
+      padding: 3rem 0;
+    }
+
+    .services-grid-full {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .service-card-full {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1rem;
+      padding: 2rem 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .service-card-full:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(59, 130, 246, 0.3);
+      transform: translateY(-6px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card-full .icon {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .service-card-full h3 {
+      color: #102131;
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card-full p {
+      color: #091a31;
+      font-size: 0.98rem;
+    }
+
+    .service-card-full ul {
+      margin-top: 1rem;
+      color: #081b35;
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-card-full ul li {
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: #113d74;
+      font-size: 0.95rem;
+    }
+
+    .service-card-full ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #010b16;
+      font-weight: 700;
+    }
+
+    .service-tag {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.15);
+      color: #0f2949;
+      padding: 0.2rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .cta-section {
+      background: rgba(211, 193, 193, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1.5rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .cta-section h2 {
+      color: #2c6cac;
+      margin-bottom: 0.8rem;
+    }
+
+    .cta-section p {
+      color: #142842;
+      max-width: 500px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .section-title {
+      color: #021527;
+      border-left-color: #1666e7;
+    }
+
+    .services-page > .container > p {
+      color: #0c52c2;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Portfolio</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="services-page">
+    <div class="container">
+      <h1 class="section-title">My Services</h1>
+      <p style="font-size: 1.1rem; max-width: 700px; margin-bottom: 1rem;">
+        Leveraging cutting-edge AI and machine learning to transform healthcare delivery, improve patient outcomes, and streamline clinical workflows. 
+        Additionally, I provide innovative solutions for farm data automation, agricultural intelligence, and data-driven decision making across multiple sectors.
+      </p>
+
+      <div class="services-grid-full">
+        <!-- Service 1: AI in Healthcare -->
+        <div class="service-card-full">
+          <span class="icon">🏥</span>
+          <span class="service-tag">Healthcare AI</span>
+          <h3>AI in Healthcare</h3>
+          <p>Building intelligent healthcare systems with Large Language Models, RAG architecture, and custom fine-tuning for clinical applications.</p>
+          <ul>
+            <li>LLM-powered clinical decision support</li>
+            <li>RAG for medical knowledge retrieval</li>
+            <li>Custom fine-tuning on medical data</li>
+            <li>Patient risk prediction &amp; stratification</li>
+            <li>Medical imaging analysis</li>
+          </ul>
+        </div>
+
+        <div class="service-card-full">
+        <span class="icon">📊</span>
+        <span class="service-tag data">MEL Automation</span>
+        <h3>MEL Data Automation System</h3>
+        <p>End-to-end Monitoring, Evaluation, and Learning (MEL) data workflow for farmer productivity and market outcomes monitoring. Built with R, Quarto, Shiny, and GitHub Actions.</p>
+        <ul>
+            <li>Import &amp; validate farmer-level primary data</li>
+            <li>Identify duplicates, missingness &amp; logical inconsistencies</li>
+            <li>Create documented analysis-ready datasets</li>
+            <li>Calculate MEL indicators by region, sex &amp; treatment group</li>
+            <li>Automated reporting with Quarto &amp; Shiny dashboards</li>
+        </ul>
+        </div>
+
+        <!-- Service 3: Predictive Analytics -->
+        <div class="service-card-full">
+          <span class="icon">📊</span>
+          <span class="service-tag">Predictive Analytics</span>
+          <h3>Predictive Health Analytics</h3>
+          <p>Machine learning models that predict disease progression, treatment outcomes, and identify at-risk patients before critical events occur.</p>
+          <ul>
+            <li>Disease progression modeling</li>
+            <li>Treatment outcome prediction</li>
+            <li>Early warning systems</li>
+            <li>Patient readmission risk</li>
+            <li>Population health analytics</li>
+          </ul>
+        </div>
+
+        <!-- Service 4: Medical Imaging AI -->
+        <div class="service-card-full">
+          <span class="icon">🩻</span>
+          <span class="service-tag">Computer Vision</span>
+          <h3>Medical Imaging AI</h3>
+          <p>Deep learning solutions for analyzing medical images including X-rays, MRIs, CT scans, and pathology slides with high accuracy.</p>
+          <ul>
+            <li>Automated anomaly detection</li>
+            <li>Radiology report generation</li>
+            <li>Image segmentation &amp; classification</li>
+            <li>Pathology slide analysis</li>
+            <li>Multi-modal image fusion</li>
+          </ul>
+        </div>
+
+        <!-- Service 5: Healthcare Web Solutions -->
+        <div class="service-card-full">
+          <span class="icon">🌐</span>
+          <span class="service-tag">Full Stack Development</span>
+          <h3>Healthcare Web Platforms</h3>
+          <p>Secure, HIPAA-compliant web applications that connect patients, providers, and healthcare data in real-time.</p>
+          <ul>
+            <li>Telemedicine platforms</li>
+            <li>Patient portals &amp; dashboards</li>
+            <li>Clinical trial management</li>
+            <li>Health data visualization</li>
+            <li>Appointment &amp; scheduling systems</li>
+          </ul>
+        </div>
+
+        <!-- Service 6: Genomics AI -->
+        <div class="service-card-full">
+          <span class="icon">🧬</span>
+          <span class="service-tag">Genomics</span>
+          <h3>Genomics &amp; Precision Medicine</h3>
+          <p>AI solutions for genomic data analysis, enabling personalized treatment plans based on individual genetic profiles.</p>
+          <ul>
+            <li>Genomic variant analysis</li>
+            <li>Personalized treatment recommendations</li>
+            <li>Drug discovery &amp; repurposing</li>
+            <li>Biomarker identification</li>
+            <li>Integrative multi-omics analysis</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h2>Ready to Transform Healthcare with AI?</h2>
+        <p>Let's collaborate on building innovative healthcare solutions that improve patient outcomes and streamline clinical workflows.</p>
+        <a href="contact.html" class="btn">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <h4>About This Site</h4>
+        <p style="color: #94a3b8; font-size: 0.95rem;">
+          Personal portfolio showcasing my work in Healthcare AI, Machine Learning, and Medical Technology.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 [Your Name]. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

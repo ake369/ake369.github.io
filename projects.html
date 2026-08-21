@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .projects-page {
+      padding: 3rem 0;
+    }
+
+    .projects-grid-full {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .project-card-full {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 1rem;
+      padding: 2rem 1.8rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card-full:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+      transform: translateY(-6px);
+    }
+
+    .project-card-full .icon {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .project-card-full .project-tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 0.2rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      align-self: flex-start;
+    }
+
+    .project-card-full h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-card-full p {
+      color: #475569;
+      font-size: 0.98rem;
+      flex: 1;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-card-full .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .project-card-full .tech-stack span {
+      background: #f1f5f9;
+      padding: 0.2rem 0.7rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      color: #334155;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .project-links a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .project-links a::after {
+      content: " →";
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+
+    .project-links a:hover::after {
+      transform: translateX(4px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Portfolio</a>
+      <button class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="projects-page">
+    <div class="container">
+      <h1 class="section-title">My Projects</h1>
+      <p style="font-size: 1.1rem; color: #475569; max-width: 700px; margin-bottom: 1rem;">
+        Leveraging cutting-edge AI, machine learning, and business intelligence to transform healthcare delivery, automate farm data processes, and drive data-informed business decisions. I provide end-to-end solutions from data collection and analysis to interactive dashboards and automated reporting.
+      </p>
+    <div class="projects-grid-full">
+  <div class="project-card-full">
+    <span class="icon">🏥</span>
+    <span class="project-tag">Healthcare AI</span>
+    <h3>Clinical Decision Support System</h3>
+    <p>
+      LLM-powered clinical decision support system using RAG architecture to provide evidence-based treatment recommendations from medical literature.
+    </p>
+    <div class="tech-stack">
+      <span>Python</span>
+      <span>LangChain</span>
+      <span>OpenAI</span>
+      <span>Pinecone</span>
+      <span>FHIR</span>
+    </div>
+    <div class="project-btn-wrapper">
+  <a href="#" class="project-btn">Explore Project →</a>
+</div>
+  </div>
+
+  <div class="project-card-full">
+  <span class="icon">📊</span>
+  <span class="project-tag">MEL Automation</span>
+  <h3>MEL Data Automation Portfolio</h3>
+  <p>
+    End-to-end Monitoring, Evaluation, and Learning (MEL) data workflow demonstrating farmer productivity and market outcomes monitoring. Uses R for data cleaning, validation, analysis, and indicator calculation.
+  </p>
+  <div class="tech-stack">
+    <span>R</span>
+    <span>Quarto</span>
+    <span>Shiny</span>
+    <span>GitHub Actions</span>
+    <span>Tidyverse</span>
+    <span>Testthat</span>
+  </div>
+  <div class="project-btn-wrapper">
+  <a href="https://github.com/ake369/mel-data-automation-farmer-outcomes" class="project-btn">Explore Project →</a>
+</div>
+</div>
+
+  <div class="project-card-full">
+    <span class="icon">🩻</span>
+    <span class="project-tag">Medical Imaging</span>
+    <h3>AI-Powered Radiology Assistant</h3>
+    <p>
+      Deep learning model for automated kidney disease detection using CT scans, with AI-generated radiology reports.
+    </p>
+    <div class="tech-stack">
+      <span>Python</span>
+      <span>PyTorch</span>
+      <span>MONAI</span>
+      <span>FastAPI</span>
+      <span>DICOM</span>
+    </div>
+    <div class="project-btn-wrapper">
+  <a href="https://github.com/ake369/kidney_stone_prediction" class="project-btn">Explore Project →</a>
+</div>
+  </div>
+
+  <div class="project-card-full">
+    <span class="icon">💊</span>
+    <span class="project-tag">Clinical NLP</span>
+    <h3>Medical Literature Q&amp;A System</h3>
+    <p>
+      RAG-powered question answering system that extracts and synthesizes information from millions of medical research papers.
+    </p>
+    <div class="tech-stack">
+      <span>Python</span>
+      <span>Transformers</span>
+      <span>Hugging Face</span>
+      <span>Elasticsearch</span>
+      <span>Flask</span>
+    </div>
+    <div class="project-btn-wrapper">
+  <a href="#" class="project-btn">Explore Project →</a>
+</div>
+  </div>
+
+  <div class="project-card-full">
+    <span class="icon">📊</span>
+    <span class="project-tag">Predictive Analytics</span>
+    <h3>Patient Risk Prediction System</h3>
+    <p>
+      ML models that predict patient readmission risk, disease progression, and identify at-risk patients for early intervention.
+    </p>
+    <div class="tech-stack">
+      <span>Python</span>
+      <span>XGBoost</span>
+      <span>Scikit-learn</span>
+      <span>MLflow</span>
+      <span>Streamlit</span>
+    </div>
+    <div class="project-btn-wrapper">
+  <a href="https://github.com/ake369/skin_disease" class="project-btn">Explore Project →</a>
+</div>
+  </div>
+
+  <div class="project-card-full">
+    <span class="icon">🌐</span>
+    <span class="project-tag">Web Development</span>
+    <h3>HIPAA-Compliant Telemedicine Platform</h3>
+    <p>
+      Secure, HIPAA-compliant telemedicine platform with real-time video consultation, EHR integration, and patient management.
+    </p>
+    <div class="tech-stack">
+      <span>React</span>
+      <span>FastAPI</span>
+      <span>WebRTC</span>
+      <span>PostgreSQL</span>
+      <span>FHIR</span>
+    </div>
+    <div class="project-btn-wrapper">
+  <a href="#" class="project-btn">Explore Project →</a>
+</div>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <h4>About This Site</h4>
+        <p style="color: #94a3b8; font-size: 0.95rem;">
+          Personal portfolio showcasing my work in AI, Machine Learning, and Web Development.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="mailto:you@example.com">Email</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 [Your Name]. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', function() {
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
