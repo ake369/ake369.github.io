@@ -197,42 +197,37 @@
           </div>
         </div>
 
-        <div>
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" placeholder="Your name" required>
-              </div>
-              <div>
-                <label for="email">Email</label>
-                <input type="email" id="email" placeholder="you@example.com" required>
-              </div>
-            </div>
+        <form action="https://formspree.io/f/xkjweraj" method="POST" class="contact-form" id="contactForm">
+  <div class="form-row">
+    <div>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="_replyto" placeholder="you@example.com" required>
+    </div>
+  </div>
 
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="What's this about?" required>
+  <label for="subject">Subject</label>
+  <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
 
-            <label for="service">Service Interested In</label>
-            <select id="service">
-              <option value="">Select a service...</option>
-              <option value="ai-ml">AI &amp; ML Development</option>
-              <option value="llm">LLM-powered Applications</option>
-              <option value="web">Web Development</option>
-              <option value="data">Data Analytics</option>
-              <option value="cloud">Cloud &amp; MLOps</option>
-              <option value="consulting">Consulting &amp; Strategy</option>
-              <option value="other">Other</option>
-            </select>
+  <label for="service">Service Interested In</label>
+  <select id="service" name="service">
+    <option value="">Select a service...</option>
+    <option value="healthcare">Healthcare AI</option>
+    <option value="agriculture">Farm Data Automation</option>
+    <option value="bi">Business Intelligence</option>
+    <option value="fullstack">Full Stack Development</option>
+    <option value="other">Other</option>
+  </select>
 
-            <label for="message">Message</label>
-            <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+  <label for="message">Message</label>
+  <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
 
-            <button type="submit" class="btn">Send Message</button>
-
-            <div id="formStatus" class="form-status"></div>
-          </form>
-        </div>
+  <button type="submit" class="btn">Send Message</button>
+  <div id="formStatus" class="form-status"></div>
+</form>
       </div>
     </div>
   </section>
